@@ -1,0 +1,69 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="{% static 'app/images/Neel.png' %}" alt="" width="70" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="{% url 'category' 'ML' %}">Milk</a></li>
+              <li><a class="dropdown-item" href="{% url 'category' 'CR' %}">Curd</a></li>
+              <li><a class="dropdown-item" href="{% url 'category' 'MS' %}">Milkshake</a></li>
+              <li><a class="dropdown-item" href="{% url 'category' 'LS' %}">Lassi</a></li>
+              <li><a class="dropdown-item" href="{% url 'category' 'GH' %}">Ghee</a></li>
+              <li><a class="dropdown-item" href="{% url 'category' 'PN' %}">Paneer</a></li>
+              <li><a class="dropdown-item" href="{% url 'category' 'CZ' %}">Cheese</a></li>
+              <li><a class="dropdown-item" href="{% url 'category' 'IC' %}">Ice-cream</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'about' %}">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-info" type="submit">Search</button>
+        </form>
+      </div>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown mx-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">LegitBoss</a>
+            <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Orders</a></li>
+                <li><a class="dropdown-item" href="#">Change Password</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+        </li>
+
+        <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#">Cart 4</a>
+        </li>
+        <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="#">Wishlist 4</a>
+        </li>
+        <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="{% url 'login' %}">Login</a>
+        </li>
+        <li class="nav-item mx-2">
+            <a class="nav-link text-white" href="{% url 'register' %}">Registration</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
